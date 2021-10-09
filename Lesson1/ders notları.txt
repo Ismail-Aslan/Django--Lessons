@@ -1,0 +1,22 @@
+Django kurulumu:
+----------------------------
+	Öncelikle hangi paketleri kullandığımızın kaydını tutacak olan virtual environment kurulması gerekiyor.
+(nodedaki package.js gibi)
+	
+	ADIMLAR:
+py -m venv clenv
+(Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted(hata olması durumunda))
+.\clenv\Scripts\activate
+pip install django
+-------
+githubdan clonladığımız bir projeyi açmak için yada githuba yüklemek için;
+
+pip freeze > requirements.txt (yüklenen paketleri bir dosyaya yazdırır)
+pip install -r .\requirements.txt (dosyada yazılı olan paketleri indirir)
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Create Project
+------------------------
+django-admin startproject yourprojectname
+python manage.py startapp yourappname (cd ile manage.py dosyasının olduğu klasöre geliyoruz sonra bu kodu çalıştırıyoruz)
