@@ -1,0 +1,4 @@
+Model tanımlama
+---------------------
+py manage.py makemigrations
+py manage.py migrate
