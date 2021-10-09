@@ -2,3 +2,8 @@ Model tanımlama
 ---------------------
 py manage.py makemigrations
 py manage.py migrate
+
+
+admin oluşturma
+--------------------
+py manage.py createsuperuser
