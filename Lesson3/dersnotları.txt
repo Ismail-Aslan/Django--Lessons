@@ -1,0 +1,2 @@
+pip install django_extensions (yükledikten sonra settings e ekliyoruz)
+pip install ipython          
