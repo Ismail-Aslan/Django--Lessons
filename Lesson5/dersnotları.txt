@@ -1,0 +1,10 @@
+.env dosyası kullanımı için--->
+
+        pip install python-decouple
+
+.env içerisinde tırnak kullanma!!!!
+
+settings.py içerisinde--->
+
+        from decouple import config
+        SECRET_KEY = config('SECRET_KEY')
