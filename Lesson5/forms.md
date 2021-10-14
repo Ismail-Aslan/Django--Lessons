@@ -117,7 +117,7 @@ base.html
 index.html
 
 ```html
-{% extends "student/layout.html" %} {% block container %}
+{% extends "student/base.html" %} {% block container %}
 <h1>Home Page</h1>
 
 <h3>Student App</h3>
