@@ -245,7 +245,7 @@ class StudentForm(forms.ModelForm):
 go to student/views.py and amend student_page
 
 ```python
-def student_form(request):
+def student_page(request):
     if request.method == 'POST':
         form = StudentForm(request.POST)
         if form.is_valid():
