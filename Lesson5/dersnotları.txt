@@ -8,3 +8,5 @@ settings.py içerisinde--->
 
         from decouple import config
         SECRET_KEY = config('SECRET_KEY')
+
+formları güzelleştirmek için paket indiriyoruz -->

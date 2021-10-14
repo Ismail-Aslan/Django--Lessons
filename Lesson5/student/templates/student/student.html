@@ -1,6 +1,7 @@
 {% extends "student/base.html" %}
 {% block container %}
 
+<div style="width: 300px; margin: auto;">
 <h2>Student Form</h2>
 
 {% comment %}
@@ -11,9 +12,12 @@
 </form>
 {% endcomment %}
 
+
+{% load crispy_forms_tags %}
 <form action="" method="post" enctype="multipart/form-data">
-  {% csrf_token %} {{ form.as_p }}
+  <!-- {% csrf_token %} {{ form.as_p }} -->
+  {% csrf_token %} {{ form | crispy }} <!-- crispy_form-->
   <input type="submit" value="OK" />
 </form>
-
+</div>
 {% endblock container %}
