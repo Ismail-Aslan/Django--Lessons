@@ -170,10 +170,10 @@ go to student/urls.py
 ```python
 from django.urls import path
 
-from .views import student_form
+from .views import student_page
 
 urlpatterns = [
-    path('', student_form, name='student'),
+    path('', student_page, name='student'),
 ]
 ```
 
