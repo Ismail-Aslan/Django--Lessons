@@ -128,7 +128,7 @@ index.html
 student.html
 
 ```html
-{% extends "student/layout.html" %} {% block container %}
+{% extends "student/base.html" %} {% block container %}
 <form action="">
   <label for="">student name</label>
   <input type="text" />
