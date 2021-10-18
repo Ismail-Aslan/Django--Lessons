@@ -7,6 +7,12 @@ class Student (models.Model):
     email = models.EmailField(max_length=254)
     phone = models.CharField(max_length=50)
     GENDER = (
-        ("1","Female")
-        ("2","Male")
+        ("1","Female"),
+        ("2","Male"),
+        ("3","Other"),
+        ("4","Prefer Not To Say")
     )
+    
+    gender = models.CharField(max_length=50,choices=GENDER)
+    number = models.CharField(max_length=50)
+    image = models.ImageField(upload_to="student/",default="avatar.png")
