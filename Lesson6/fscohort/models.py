@@ -16,3 +16,6 @@ class Student (models.Model):
     gender = models.CharField(max_length=50,choices=GENDER)
     number = models.CharField(max_length=50)
     image = models.ImageField(upload_to="student/",default="avatar.png")
+    
+    def __str__(self):
+        return (f'{self.number} - {self.first_name} {self.last_name}')
