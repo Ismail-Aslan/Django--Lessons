@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from .models import Student
 from .forms import StudentForm
@@ -54,7 +54,25 @@ def student_detail(request,id):
     
 
 def student_update(request,id):
-    pass
+    
+    student = Student.objects.get(id=id)
+    
+    form = StudentForm(instance=student)
+    
+    if request.method == "POST":
+        form = StudentForm(request.POST, instance=student)
+        if form.is_valid():
+            form.save()
+            return redirect("list")
+    
+    
+    context = {
+        "student":student,
+        "form": form
+    }
+    
+    return render(request, "fscohort/student_update.html", context)
+
 
 def student_delete(request,id):
     pass
