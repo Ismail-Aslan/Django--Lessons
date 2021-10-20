@@ -2,7 +2,7 @@
 {% block content %}
 <form action="" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
-    {{form}}
-    <input type="submit" value="Add">
+    <p>Are you sure to delete this todo?</p>
+    <input type="submit" value="DELETE">
 </form>
 {% endblock content %}
