@@ -9,6 +9,7 @@ def home(request):
 
 def todo_list(request):
     todos = Todo.objects.all()
+    
     context = {
         'todos' : todos
     }
@@ -35,7 +36,7 @@ def todo_update(request,id):
     form = TodoUpdateForm(instance = todo)
     
     if request.method == "POST":
-        form = TodoAddForm(request.POST,instance = todo)
+        form = TodoUpdateForm(request.POST,instance = todo)
         if form.is_valid():
             form.save()
             return redirect("list")
