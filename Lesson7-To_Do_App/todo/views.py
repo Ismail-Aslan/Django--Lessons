@@ -9,9 +9,16 @@ def home(request):
 
 def todo_list(request):
     todos = Todo.objects.all()
+    form = TodoAddForm()
     
+    if request.method == "POST":
+        form = TodoAddForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("list")
     context = {
-        'todos' : todos
+        'todos' : todos,
+        'form' : form
     }
     return render(request, "todo/todo_list.html", context)
 
@@ -43,7 +50,8 @@ def todo_update(request,id):
         
         
     context = {
-        'form' : form
+        'form' : form,
+        'id' :id
     }
     return render(request, "todo/todo_update.html", context)
 
