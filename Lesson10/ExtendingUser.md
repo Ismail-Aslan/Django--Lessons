@@ -320,9 +320,6 @@ SECRET_KEY = config('SECRET_KEY')
 3. Adding New Fields to Default User by Using AbstractUser
 4. Redefining Default User from Scratch by Using AbstractBaseUser
 
-Navigate to https://docs.djangoproject.com/en/3.2/topics/class-based-views/
-Explain Documentation
-
 ## Adding New Fields to Default User by Using AbstractUser
 
 go to users/models.py
