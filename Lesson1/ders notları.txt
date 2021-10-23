@@ -22,3 +22,9 @@ django-admin startproject yourprojectname .
 python manage.py startapp yourappname (cd ile manage.py dosyasının olduğu klasöre geliyoruz sonra bu kodu çalıştırıyoruz)
 
 sonrasında oluşturulan app settingsde instaled_apps e kaydedilecek
+
+********************************************************
+
+python manage.py makemigrations
+python manage.py migrate
+py manage.py runserver 
